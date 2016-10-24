@@ -47,6 +47,9 @@ $(document).ready(function() {
 	            items:2
 	        },
 	        990:{
+	            items:3
+	        },
+	        1330:{
 	            items:4
 	        }
 	    }

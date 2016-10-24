@@ -23,13 +23,30 @@
 
 }
 
-@media (max-width: 1200px) {
-    
-
-}
 
 @media (max-width: 1500px) {
 	.menu li {margin: 0;}
+}
+
+@media (max-width: 1400px) {
+    .contacts__left {width: 72%;}
+    .contacts__info {width: 58%;}
+    .contacts__map {width: 63%;}
+}
+
+@media (max-width: 1300px) {
+    .contacts__left {width: 69%;}
+    .contacts__info {width: 63%;}
+    .contacts__map {width: 57%;}
+}
+
+@media (max-width: 1200px) {
+    .contacts__left {width: 67%;}
+
+}
+
+@media (max-width: 1100px) {
+    .contacts__left {width: 63%;}
 }
 
 @media (max-width: 1230px) {
@@ -48,7 +65,8 @@
 
 @media (max-width: 992px) {
 	.workarea h1 {font-size: 48px;}
-	.head-h1 h1 {font-size: 48px; margin-bottom: 36px;}
+	.head-h1 h1 {font-size: 48px; margin-bottom: 0; display: inline-block; min-height: 126px;}
+	.head-h1 {margin-bottom: 40px;}
 	.workarea h2 {font-size: 36px;}
 	.workarea h3 {font-size: 24px;}
 	.workarea h4 {font-size: 20px;}
@@ -85,8 +103,8 @@
 	.comments-no-autorize__input input, .comments-no-autorize__textarea textarea {font-size: 14px;}
 	.catalog__img .catalog__item-info {left: 0; right: 0;}
 	.contacts__left {float: none; width: auto;}
-	.contacts__info {padding: 43px 22% 39px 7px; margin-right: -18%;}
-	.contacts__map {width: 62%;}
+	.contacts__info {padding: 43px 22% 39px 30px; margin-right: -18%;}
+	.contacts__map {width: 53%;}
 	.contacts__right {float: none; padding-top: 30px;}
 	.baner-about {margin: 0 -15px 40px;}
 	.baner-about__img {bottom: 0;}
@@ -94,6 +112,8 @@
 	.stamp img {width: 126px;}
 	.main-page .head {min-height: 488px;}
 	.head-h1 {padding-top: 100px;}
+	.content-head {margin-top: -427px; min-height: 430px;}
+
 
 }
 
@@ -168,12 +188,17 @@
 	.service__list {display: block; width: auto;}
 	.products__item-in {float: left; width: 100%;}
 	.products__slider {padding: 0 20px;}
-	.main-page .head {min-height: 100px; margin-bottom: 30px;}
+	.main-page .head {min-height: 30px; margin-bottom: 30px;}
 	.catalog-btn__all {margin-top: 0;}
 	.head-h1 {padding-top: 36px;}
 	.head_bg {background-size: 200%;}
 	.main-page .head {padding-bottom: 35px;}
 	.stamp img {width: 60px;}
+	.content-head {margin-top: 0; min-height: 50px; padding: 0 15px 50px;}
+	.main-page .head:before {display: none;}
+	.head_bg {background-size: 140%;}
+	.head-h1 {padding-top: 0;}
+	.head-h1 h1 {min-height: 20px; margin: 0; vertical-align: top;}
 
 
 
