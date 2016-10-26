@@ -55,12 +55,17 @@
 	.back-call {margin-left: 20px;}
 	.menu a, .menu span {padding: 0 13px;}
 	.soc li {margin-left: 21px;}
+	.gallery__item-img {width: 420px;}
+	.gallery__item-txt {margin: 0 0 0 440px;}
+
 }
 
 @media (max-width: 1180px) {
 	.footer-menu li {padding-right: 15px;}
 	.footer-soc li {margin-left: 15px;}
 	.copyright {padding-right: 20px;}
+	.gallery__list {padding: 0 30px;}
+	.gallery-shadow {padding: 30px 15px 28px;}
 }
 
 @media (max-width: 992px) {
@@ -86,7 +91,7 @@
     .develop {margin-top: -30px;}
     .back-call {font-size: 14px;}
 
-    .col-md-6-big, .col-md-2-big, .col-md-4-big {margin: 0;}
+    .col-md-6-big, .col-md-2-big, .col-md-4-big, .col-md-5-big {margin: 0;}
     .comments-no-autorize {padding: 20px 30px 18px}
     .catalog__img-name a {font-size: 18px;}
     .catalog__img {height: 250px; margin-bottom: 15px;}
@@ -113,7 +118,12 @@
 	.main-page .head {min-height: 488px;}
 	.head-h1 {padding-top: 100px;}
 	.content-head {margin-top: -427px; min-height: 430px;}
-
+	.comments__textarea {font-size: 16px; padding: 10px 15px 12px }
+	.comments__user {font-size: 18px;}
+	.comments .comments {margin-left: 50px;}
+	.gallery__item-img {float: none; margin: 0 auto;}
+	.gallery__item-txt {margin: 0;}
+	.fotorama {margin-bottom: 15px;}
 
 }
 
@@ -199,8 +209,10 @@
 	.head_bg {background-size: 140%;}
 	.head-h1 {padding-top: 0;}
 	.head-h1 h1 {min-height: 20px; margin: 0; vertical-align: top;}
-
-
+	.comments .comments {margin-left: 15px;}
+	.gallery__list {padding: 0;}
+	.gallery__item-img {width: 100%;}
+	.gallery .owl-nav {display: none;}
 
 }
 

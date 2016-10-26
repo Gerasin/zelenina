@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	$('.mask').inputmask("+999(99)999-99-99");  //static mask
+
 	var minHeight = $('.sidebar_inner').height();
 	$('.container').css({'min-height' : minHeight});
 
@@ -11,7 +13,8 @@ $(document).ready(function() {
 	$('.corusel').owlCarousel({
     	items:1,
 	    margin:0,
-	    autoHeight:true,
+	    lazyLoad:true,
+	    autoHeight:false,
 	    nav:true
 	});
 
@@ -71,6 +74,21 @@ $(document).ready(function() {
 	            items:3
 	        }
 	    }
+	});
+
+
+	$('.gallery__list').owlCarousel({
+    	items:1,
+    	loop:false,
+	    margin:0,
+	    autoHeight:false,
+	    nav:true
+	});
+
+	// select style
+	$('select').selectize({
+	    create: true,
+	    sortField: 'text'
 	});
 
 
@@ -231,10 +249,45 @@ $(document).ready(function() {
 		return false;
 	});
 
-	footerHeight()
+	footerHeight();
 
+	// Зависающий заголовок
+	headerHeight();
 
 })
+
+
+function headerHeight() {
+
+	if($('.section-header').length) {
+		var hHeight = $('.section-header h2').height();
+		$('.section-header').css({'min-height' : hHeight})
+
+		var headeName = $('.section-header');
+		var hStopTop = headeName.offset().top;
+		var hStopBottom = $('.section-stop').offset().top - headeName.height() - 22;
+		var hStop = hStopBottom - hStopTop;
+		$(window).scroll(function(){
+			var scrollBody = $(window).scrollTop();
+			if(scrollBody > hStopTop) {
+				headeName.addClass('active');
+			} else {
+				headeName.removeClass('active');
+			};
+			if(scrollBody > hStopBottom) {
+				headeName.addClass('stop');
+				headeName.find('h2').css({'top' : hStop})
+			} else {
+				headeName.removeClass('stop');
+				
+				headeName.find('h2').css({'top' : 0}) 
+			};
+		})
+	}
+
+}
+
+
 
 function footerHeight() {
 	$('.footer-padding').css({'height' : $('.footer').height() + 61});
@@ -242,12 +295,14 @@ function footerHeight() {
 $(window).load(function() {
 
 	footerHeight();
+	headerHeight();
 
 });
 
 $(window).resize(function() {
 
 	footerHeight();
+	headerHeight();
 
 });
 
@@ -260,5 +315,6 @@ $('body').append(
 	<ol style="padding: 9px 0 7px 30px; margin: 0"> \
 		<li style="margin: 0 0 5px;"><a href="index.html">Index</a></li> \
 		<li style="margin: 0 0 5px;"><a href="typography.html">Typography</a></li> \
+		<li style="margin: 0 0 5px;"><a href="statya.html">Statya</a></li> \
 	</ol> \
 </div>');
