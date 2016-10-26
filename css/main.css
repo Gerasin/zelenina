@@ -263,8 +263,9 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
     -moz-box-shadow: 0 10px 30px 1px rgba(0,0,0,.08);
     box-shadow: 0 10px 30px 1px rgba(0,0,0,.08); }
 .catalog__img {position: relative;height: 310px;background: #000;overflow: hidden;margin: 0 0 28px;}
-.catalog__img:hover {background: #003d20;}
+.catalog__img:hover {background: none;}
 .catalog__img img {opacity: 0.5; height: 100%; max-width: inherit;}
+.catalog__img:hover img {opacity: 1;}
 .catalog__img-name {position: absolute; bottom: 129px; text-align: center; left: 10px; right: 10px;}
 .catalog__img-name:after {display: block; content: ' '; height: 30px; width: 100px; margin: 0 auto; border-bottom: 2px solid #fff;}
 .catalog__img-name a {text-decoration: none; color: #fff; font-size: 30px; line-height: 1.5;}
@@ -588,7 +589,8 @@ body .honors li:before {display: none;}
     border-radius: 50%;}
 body .fotorama__arr {width: 22px; height: 36px; background: url(../img/themp/gall_pointer.png) 0 0 no-repeat; zoom: 0.5; margin-left: 10px;}
 .fotorama__arr.fotorama__arr--next {background-position: -22px 0; margin-right: 10px; margin-left: 0;}
-
+.row-text h1, .row-text h2, .row-text h3, .row-text h4 {text-align: left !important;}
+.row-text {margin-bottom: 40px;}
 
 /* ==========================================================================
    Helper classes
