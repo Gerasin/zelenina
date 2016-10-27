@@ -270,7 +270,7 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .catalog__img:hover img {opacity: 0.8;}
 .catalog__img-name {position: absolute; bottom: 129px; text-align: center; left: 10px; right: 10px;}
 .catalog__img-name:after {display: block; content: ' '; height: 30px; width: 100px; margin: 0 auto; border-bottom: 2px solid #fff;}
-.catalog__img-name a {text-decoration: none; color: #fff; font-size: 30px; line-height: 1.5;}
+.catalog__img-name a {text-decoration: none; color: #fff; font-size: 30px; line-height: 1.1;}
 .catalog__img-name a:hover {color: #fff;}
 .catalog__item-txt {padding: 0 50px; font-size: 18px; line-height: 26px; height: 130px; overflow: hidden;}
 .catalog__item-info {margin: 16px 50px 0;border-top: 1px solid #ccc;padding: 8px 0 0; font-size: 16px;}
@@ -377,21 +377,19 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .footer-soc {float: left; padding: 0; margin: -4px 0 0; white-space: nowrap;}
 .footer-soc li {margin: 0 0 0 22px; list-style: none; display: inline-block; vertical-align: top;}
 .footer-soc li a {display: inline-block; width: 27px; height: 27px;}
+.footer-soc li a:hover {opacity: 0.7;}
+.footer-soc li a 
 
 .develop {float: right;}
 .develop a {color: #fff; text-decoration: none; border-bottom: 1px solid #4d4d4d;}
 @media (min-width: 992px) {
     .develop a:hover {border-color: transparent;}
 }
-
-.delivery {
-    background-color: #fff;
-    margin: 0 0 48px;
-    position: relative;
+.body-bg {background: #fbfbfb;}
+.delivery {background-color: #fff; max-width: 920px; margin: 0 auto 82px; position: relative; z-index: 10;
     -webkit-box-shadow: 0 10px 30px 1px rgba(0,0,0,.08);
     -moz-box-shadow: 0 10px 30px 1px rgba(0,0,0,.08);
-    box-shadow: 0 10px 30px 1px rgba(0,0,0,.08);
-    }
+    box-shadow: 0 10px 30px 1px rgba(0,0,0,.08); }
 .delivery__head {border-bottom: 1px solid #ccc; padding: 40px 10px 28px 60px;}
 .delivery h3 {text-align: left;margin-bottom: 58px;}
 .delivery__head span {display: inline-block; line-height: 44px; padding-right: 15px;}
@@ -601,6 +599,17 @@ body .fotorama__arr {width: 22px; height: 36px; background: url(../img/themp/gal
 .fotorama__arr.fotorama__arr--next {background-position: -22px 0; margin-right: 10px; margin-left: 0;}
 .row-text h1, .row-text h2, .row-text h3, .row-text h4 {text-align: left !important;}
 .row-text {margin-bottom: 40px;}
+
+.blog-big {background: #fff; margin: 0 0 80px;
+    -webkit-box-shadow: 0 10px 30px 1px rgba(0,0,0,.08);
+    -moz-box-shadow: 0 10px 30px 1px rgba(0,0,0,.08);
+    box-shadow: 0 10px 30px 1px rgba(0,0,0,.08);}
+.blog-big .catalog__img img {vertical-align: top;}
+.blog-big .catalog__img {height: 720px; margin-bottom: 0;}
+.blog-big .catalog__img-name {bottom: 50%;}
+.blog-big .catalog__item-txt {height: 627px; padding-top: 52px; margin-bottom: 41px;}
+.delivery-bg {position: relative; height: 290px; margin-bottom: -180px; z-index: 1;}
+.blog-big > div {padding-left: 0; margin-right: 0;}
 
 /* ==========================================================================
    Helper classes

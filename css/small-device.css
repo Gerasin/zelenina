@@ -32,6 +32,8 @@
     .contacts__left {width: 72%;}
     .contacts__info {width: 58%;}
     .contacts__map {width: 63%;}
+    .catalog__item-txt {padding: 0 25px;}
+    .catalog__item-info {margin-left: 25px; margin-right: 25px;}
 }
 
 @media (max-width: 1300px) {
@@ -47,6 +49,8 @@
 
 @media (max-width: 1100px) {
     .contacts__left {width: 63%;}
+    .catalog__item-info {font-size: 13px;}
+    .catalog__item-info span img {height: 10px; margin-top: 2px;}
 }
 
 @media (max-width: 1230px) {

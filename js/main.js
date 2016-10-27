@@ -369,5 +369,6 @@ $('body').append(
 		<li style="margin: 0 0 5px;"><a href="typography.html">Typography</a></li> \
 		<li style="margin: 0 0 5px;"><a href="statya.html">Statya</a></li> \
 		<li style="margin: 0 0 5px;"><a href="opt.html">Opt</a></li> \
+		<li style="margin: 0 0 5px;"><a href="blog.html">Blog</a></li> \
 	</ol> \
 </div>');
