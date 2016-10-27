@@ -128,6 +128,14 @@
 	.gallery__item-img {float: none; margin: 0 auto;}
 	.gallery__item-txt {margin: 0;}
 	.fotorama {margin-bottom: 15px;}
+	.blog-big .catalog__img {height: auto;}
+	.blog-big .catalog__img img {height: auto; width: 100%;}
+	.blog-big .catalog__img a {font-size: 30px;}
+	.blog-big .catalog__item-txt {height: auto; padding-top: 15px; margin-bottom: 15px;}
+	.blog-big .catalog__item-info {margin-bottom: 15px;}
+	.delivery-bg {margin-bottom: -80px; height: 180px; overflow: hidden;}
+
+
 
 }
 
@@ -217,6 +225,8 @@
 	.gallery__list {padding: 0;}
 	.gallery__item-img {width: 100%;}
 	.gallery .owl-nav {display: none;}
+	.blog-big .catalog__img a {font-size: 18px;}
+	.delivery__btn {margin-top: 20px; width: auto;}
 
 }
 
