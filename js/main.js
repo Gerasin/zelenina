@@ -82,7 +82,9 @@ $(document).ready(function() {
     	loop:false,
 	    margin:0,
 	    autoHeight:false,
-	    nav:true
+	    nav:true,
+	    mouseDrag : false,
+        touchDrag : false
 	});
 
 	// select style
@@ -253,6 +255,56 @@ $(document).ready(function() {
 
 	// Зависающий заголовок
 	headerHeight();
+
+
+	// Валидация
+	if($('.valid-phone').length) {
+		$('.valid-phone').inputmask("999999999999");
+	};
+	$('.valid-btn').on('click', function () {
+		var way = $(this).parents('form');
+		var valIndex = 0;
+		var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+		way.find('input').removeClass('inp-error');
+		way.find('.error-txt').fadeOut();
+		way.find('.valid-txt').each(function() {
+			var lengthVal = $(this).val().length;
+			if(lengthVal < 2) {
+				$(this).parent().find('.error-txt').fadeIn();
+				$(this).addClass('inp-error');
+				valIndex = 1
+			}
+		});
+		way.find('.valid-mail').each(function() {
+			console.log('test');
+			var lengthVal = $(this).val().length;
+			if(lengthVal < 2) {
+				$(this).parent().find('.error-txt').fadeIn();
+				$(this).addClass('inp-error');
+				valIndex = 1
+			} else {
+				if(!pattern.test($(this).val())){
+		            $(this).parent().find('.error-txt').fadeIn();
+		            $(this).addClass('inp-error');
+		            valIndex = 1
+		        }
+	        }
+		});
+		way.find('.valid-phone').each(function() {
+			var lengthVal = $(this).val().length;
+			if(lengthVal < 7) {
+				$(this).parent().find('.error-txt').fadeIn();
+				$(this).addClass('inp-error');
+				valIndex = 1
+			}
+		});   
+
+		if(valIndex == 0) {
+			$('#modal-popup').modal('show')
+		};
+
+		return false
+	});
 
 })
 
