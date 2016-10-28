@@ -87,7 +87,7 @@
 
                                 <div class="delivery-bg"><img src="img/body/delivery-bg.png" alt=""></div>
                                 <div class="col-md-2-big">
-                                    <div class="delivery delivery-marg">
+                                    <div class="delivery">
                                         <div class="delivery__head">
                                             <span>Рассказать  друзьям</span>
                                             <div class="delivery__soc">
@@ -101,8 +101,11 @@
                                             <h3>Подпишитесь на рассылку и узнавайте о самом интересном первыми!</h3>
                                             <div class="delivery__form">
                                                 <form>
-                                                    <input type="text" class="delivery__txt" placeholder="Электронная почта *">
-                                                    <input type="submit" class="delivery__btn btn" value="Отправить">
+                                                    <div class="input-box">
+                                                        <div class="error-txt">Вы неверно ввели свою почту</div>
+                                                        <input type="text" class="delivery__txt valid-mail" placeholder="Электронная почта *">
+                                                    </div>
+                                                    <input type="submit" class="delivery__btn valid-btn" value="Отправить">
                                                 </form>
                                             </div>
                                         </div>
@@ -192,20 +195,40 @@
                                 </div>
                                 <div class="col-md-5-big">
                                     <div class="comments-no-autorize">
-                                        <h2>Оставьте свой комментарий</h2>
-                                        <div class="comments-no-autorize__row">
-                                            <div class="comments-no-autorize__col">
-                                                <div class="comments-no-autorize__input"><input type="text" placeholder="Ваше имя *"></div>
+                                        <form>
+                                            <h2>Оставьте свой комментарий</h2>
+                                            <div class="comments-no-autorize__row">
+                                                <div class="comments-no-autorize__col">
+                                                    <div class="comments-no-autorize__input">
+                                                        <div class="input-box">
+                                                            <div class="error-txt">Вы не ввели Имя</div>
+                                                            <input type="text" class="valid-txt" placeholder="Ваше имя *">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="comments-no-autorize__col">
+                                                    <div class="comments-no-autorize__input">
+                                                        <div class="input-box">
+                                                            <div class="error-txt">Вы неверно ввели свою почту</div>
+                                                            <input type="text" class="valid-mail" placeholder="Электронная почта *">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="comments-no-autorize__col">
+                                                    <div class="comments-no-autorize__input">
+                                                        <div class="input-box">
+                                                            <div class="error-txt">Вы не ввели Телефон</div>
+                                                            <input type="text" class="valid-phone" placeholder="Телефон *">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="comments-no-autorize__col">
-                                                <div class="comments-no-autorize__input"><input type="text" placeholder="Электронная почта *"></div>
+                                            <div class="clearfix"></div>
+                                            <div class="comments-no-autorize__textarea">
+                                                <textarea placeholder="Комментарий..." rows="1"></textarea>
                                             </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="comments-no-autorize__textarea">
-                                            <textarea placeholder="Комментарий..." style="overflow: hidden; word-wrap: break-word; resize: none; height: 46px;"></textarea>
-                                        </div>
-                                        <input type="submit" value="Отправить" class="btn comments-no-autorize__inp">
+                                            <input type="submit" value="Отправить" class="comments-no-autorize__inp valid-btn">
+                                        </form>
                                     </div>
                                 </div>
 

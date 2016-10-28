@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-	$('.mask').inputmask("+999(99)999-99-99");  //static mask
 
 	var minHeight = $('.sidebar_inner').height();
 	$('.container').css({'min-height' : minHeight});
@@ -259,7 +258,7 @@ $(document).ready(function() {
 
 	// Валидация
 	if($('.valid-phone').length) {
-		$('.valid-phone').inputmask("999999999999");
+		$('.valid-phone').inputmask("+999(99)999-99-99");
 	};
 	$('.valid-btn').on('click', function () {
 		var way = $(this).parents('form');
@@ -342,7 +341,7 @@ function headerHeight() {
 
 
 function footerHeight() {
-	$('.footer-padding').css({'height' : $('.footer').height() + 61});
+	$('.footer-padding').css({'height' : $('.footer').height() + 25});
 }
 $(window).load(function() {
 

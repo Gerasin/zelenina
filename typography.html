@@ -114,8 +114,11 @@
                                             <h3>Подпишитесь на рассылку и узнавайте о самом интересном первыми!</h3>
                                             <div class="delivery__form">
                                                 <form>
-                                                    <input type="text" placeholder="Электронная почта *">
-                                                    <input type="submit" class="delivery__btn" value="Отправить">
+                                                    <div class="input-box">
+                                                        <div class="error-txt">Вы неверно ввели свою почту</div>
+                                                        <input type="text" class="delivery__txt valid-mail" placeholder="Электронная почта *">
+                                                    </div>
+                                                    <input type="submit" class="delivery__btn valid-btn" value="Отправить">
                                                 </form>
                                             </div>
                                         </div>
@@ -178,7 +181,7 @@
                                             </div>
                                             <div class="clearfix"></div>
                                             <div class="comments-no-autorize__textarea">
-                                                <textarea placeholder="Комментарий..."></textarea>
+                                                <textarea placeholder="Комментарий..." rows="1"></textarea>
                                             </div>
                                             <input type="submit" value="Отправить" class="comments-no-autorize__inp valid-btn">
                                         </form>

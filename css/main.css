@@ -169,7 +169,7 @@ body * {outline: none !important;}
     .layout input[type='submit']:hover, .modal input[type='submit']:hover {color: #fff; background: #3d8b37;}
 }
 .layout textarea, .modal textarea {width: 100%; background: none; font: 400 normal 18px/24px 'Open Sans', sans-serif; border: 0; padding: 0;
-    background: url(../img/themp/text-border.gif) 0 0 repeat;}
+    background: url(../img/themp/text-border.gif) 0 0 repeat; height: 24px;}
 .input-box {position: relative;}
 .error-txt {color: #ff0000; position: absolute; bottom: 90%; width: 100%; font-size: 14px; display: none;}
 
@@ -214,7 +214,7 @@ body * {outline: none !important;}
 .comments .comments {margin-left: 128px;}
 
 
-.all-comments {margin: 0 0 69px;position: relative;text-align: center;}
+.all-comments {margin: 17px 0 47px;position: relative;text-align: center;}
 .all-comments:before {content: ' '; position: absolute; top: 20px; left: 0; right: 0; border-top: 1px solid #ccc;}
 .all-comments__btn {position: relative; z-index: 3; background: #fff; padding: 0 30px;}
 body .btn, body .btn:focus {display: inline-block; padding: 0 22px; height: 40px; border: 0; vertical-align: middle; background-color: #50b748; text-decoration: none; color: #fff; font-size: 18px; line-height: 36px; font-weight: 400; vertical-align: top;
@@ -285,7 +285,7 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .catalog-short .catalog__img-name a:hover {color: #fff;}
 .catalog-short .catalog__item-in {padding: 0;}
 .catalog-short .catalog__img {margin: 0;}
-.catalog-btn__all {text-align: center; margin: -60px 0 30px;}
+.catalog-btn__all {text-align: center; margin: 0 0 30px;}
 .catalog-btn__all a {display: inline-block;}
 
 .main-blog {position: relative;padding: 151px 0 23px;margin: 190px 0 50px;}
@@ -294,7 +294,6 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .main-blog:after {content: ' '; position: absolute; left: -999px; right: -999px; bottom: 0; background: url(../img/themp/blog-border.png) 0 0 repeat-x; height: 9px;}
 
 .row-comments {margin-bottom: -350px;padding-top: 16px;}
-.row-comments
 
 .modal-header {text-align: center; font-size: 24px; margin: 32px 0 10px; padding-bottom: 0; border: 0;}
 .modal-body {margin: 0 0 10px; border: 0; padding-top: 5px; padding-bottom: 3px;}
@@ -396,7 +395,7 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .delivery__head span {display: inline-block; line-height: 44px; padding-right: 15px;}
 .delivery__soc {display: inline-block; vertical-align: top;}
 .delivery__soc .soc-lnk {display: inline-block; margin: 0 8px 5px 0; text-decoration: none; vertical-align: top; height: 44px; line-height: 42px; padding: 0 12px 0 50px; text-align: right; color: #fff !important; background: #3b5998; position: relative; min-width: 128px;}
-.delivery__soc .soc-lnk:hover {opacity: 0.9;}
+.delivery__soc .soc-lnk:hover {opacity: 0.7;}
 .delivery__soc .soc-tel {background: #1ea8e1;}
 .delivery__soc .soc-vk {background: #4d7198;}
 .delivery__soc .soc-tw {background: #1faee9;}
@@ -488,7 +487,7 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 
 .page-center {text-align: center;}
 .page-center h4 {margin-bottom: 20px;}
-.other-bg {background: #fff; margin: 0 0 60px; padding: 30px 80px 37px;
+.other-bg {background: #fff; margin: 0 0 60px; padding: 30px 80px 37px; position: relative; z-index: 2;
     -webkit-box-shadow: 0 10px 40px rgba(186,187,185,.4);
     -moz-box-shadow: 0 10px 40px rgba(186,187,185,.4);
     box-shadow: 0 10px 40px rgba(186,187,185,.4); }
@@ -611,6 +610,10 @@ body .fotorama__arr {width: 22px; height: 36px; background: url(../img/themp/gal
 .blog-big .catalog__item-txt {height: 627px; padding-top: 52px; margin-bottom: 41px;}
 .delivery-bg {position: relative; height: 290px; margin-bottom: -180px; z-index: 1;}
 .blog-big > div {padding-left: 0; margin-right: 0;}
+
+body .fancybox-close {background: url(../img/themp/close.png) 0 0 no-repeat; width: 13px; height: 13px; top: 20px; right: 20px; opacity: 0.4;}
+body .fancybox-close:hover {opacity: 1;}
+body .fancybox-overlay  {background: rgba(0, 0, 0, 0.5);}
 
 /* ==========================================================================
    Helper classes
