@@ -1,3 +1,14 @@
+function mapWidth() {
+	if($('.map').length) {
+		var mapLeft = -1 * $('.map').offset().left;
+		$('.map__wrap').css({'left' : mapLeft, 'right' : mapLeft});
+	}
+}
+
+$(window).resize(function() {
+	mapWidth()
+});
+
 $(document).ready(function() {
 
 
@@ -91,6 +102,9 @@ $(document).ready(function() {
 	    create: true,
 	    sortField: 'text'
 	});
+
+
+	mapWidth();
 
 
 
@@ -305,12 +319,15 @@ $(document).ready(function() {
 		return false
 	});
 
+
 })
 
 
 function headerHeight() {
 
 	if($('.section-header').length) {
+		$('.section-page:first').addClass('scroll_box');
+		var scrollTopBox = $('.section-page.scroll_box').offset().top;
 		var hHeight = $('.section-header h2').height();
 		$('.section-header').css({'min-height' : hHeight})
 
@@ -320,6 +337,19 @@ function headerHeight() {
 		var hStop = hStopBottom - hStopTop;
 		$(window).scroll(function(){
 			var scrollBody = $(window).scrollTop();
+
+			// if(scrollBody > scrollTopBox) {
+			// 	$('.section-page.scroll_box').next().addClass('net_page');
+			// 	$('.section-page.scroll_box').removeClass('scroll_box');
+			// 	$('.net_page').addClass('scroll_box');
+			// 	$('.net_page').removeClass('net_page');
+			// 	scrollTopBox = $('.section-page.scroll_box').offset().top;
+			// 	scrollTopBox = scrollTopBox - 150;
+			// 	$('body, html').animate({'scrollTop' : scrollTopBox});
+			// }
+
+
+
 			if(scrollBody > hStopTop) {
 				headeName.addClass('active');
 			} else {
@@ -369,5 +399,7 @@ $('body').append(
 		<li style="margin: 0 0 5px;"><a href="statya.html">Statya</a></li> \
 		<li style="margin: 0 0 5px;"><a href="opt.html">Opt</a></li> \
 		<li style="margin: 0 0 5px;"><a href="blog.html">Blog</a></li> \
+		<li style="margin: 0 0 5px;"><a href="magazine.html">Magazine</a></li> \
+		<li style="margin: 0 0 5px;"><a href="contacts.html">Contacts</a></li> \
 	</ol> \
 </div>');

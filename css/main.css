@@ -94,8 +94,8 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-html {min-height: 100%;}
-body {font: 400 normal 18px/1.2 'Open Sans', sans-serif; color: #000; height: auto; height: 100%; min-height: 100%; margin: 0; padding: 0; position: relative; -webkit-font-smoothing: antialiased;}
+html {min-height: 100%; position: relative;}
+body {font: 400 normal 18px/1.2 'Open Sans', sans-serif; color: #000; height: auto; height: 100%; min-height: 100%; margin: 0; padding: 0; -webkit-font-smoothing: antialiased;}
 
 body * {outline: none !important;}
 
@@ -131,7 +131,7 @@ body * {outline: none !important;}
 @media (min-width: 992px) {
     .back-call a:hover {border-color: transparent;}
 }
-.head-inner {min-height: 148px;}
+.head-inner {min-height: 148px; position: relative;}
 
 
 .workarea a {color: #000; text-decoration: underline;
@@ -145,7 +145,7 @@ body * {outline: none !important;}
 @media (min-width: 992px) {
     .workarea a.dotted:hover {border-color: transparent; color: #000;}
 }
-.layout h1, .modal h1 {font-size: 80px;margin: 0 0 37px;font-weight: 300;text-align: center;line-height: 1.2;}
+.layout h1, .modal h1 {font-size: 80px;margin: 0 0 4px;font-weight: 300;text-align: center;line-height: 1.2;}
 .layout h2, .modal h2 {font-size: 60px;margin: 0 0 22px;font-weight: 300;text-align: center;}
 .layout h3, .modal h3 {font-size: 30px;margin: 0 0 22px;font-weight: 300;text-align: center;}
 .layout h4, .modal h4 {font-size: 24px;margin: 0 0 11px;font-weight: 400;text-align: center;line-height: 1.3;}
@@ -213,6 +213,32 @@ body * {outline: none !important;}
 }
 .comments .comments {margin-left: 128px;}
 
+.office {margin: 0 0 70px;}
+.office h4 {padding: 0 0 8px 37px; position: relative; text-align: left !important;}
+.office h4:before {content: ' '; position: absolute; left: 0; top: 0; width: 25px; height: 30px; background: url(../img/themp/map.png) 0 0 no-repeat;}
+.office p {margin: 0 0 16px;}
+.office .lnk-dotted {text-decoration: none !important; color: #7f7f7f; border-bottom: 1px dotted #7f7f7f; margin-left: 30px;}
+.office .lnk-dotted:hover {border-color: transparent;}
+
+.contacts__user-info {border: 2px dashed #d9d9d9; position: relative; padding: 42px 120px 47px 48px; margin: 0 0 45px -50px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px; }
+.contacts__user-ava {position: absolute; top: 50%; right: -55px; margin-top: -113px; width: 225px; height: 225px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+.contacts__user-ava img {vertical-align: top; width: 225px;}
+.contacts__user-name {display: inline-block; width: 48%; vertical-align: top; margin: 0 }
+.contacts__user-info h4 {text-align: left;margin-bottom: 2px;}
+.contacts__user-info p {margin: 0 0 5px;}
+.contacts__user-name p.contacts__mail {margin-top: 22px;position: relative;padding-left: 38px;}
+.contacts__user-name p.contacts__mail:before {content: ' '; position: absolute; top: 4px; left: 0; width: 26px; height: 19px; background: url(../img/themp/ico-mail.png) 0 0 no-repeat;}
+.contacts__user-name p.contacts__mail a {text-decoration: none; color: #000; border-bottom: 1px solid #000; border-color: transparent;}
+.contacts__user-name p.contacts__mail a:hover {border-bottom: 1px solid #000;}
+.contacts__user-phone {display: inline-block; width: 48%; vertical-align: top; margin: 0 }
+.contacts__user-info .btn-phone {margin-top: 8px;}
 
 .all-comments {margin: 17px 0 47px;position: relative;text-align: center;}
 .all-comments:before {content: ' '; position: absolute; top: 20px; left: 0; right: 0; border-top: 1px solid #ccc;}
@@ -243,6 +269,7 @@ body .btn.btn-red, body .btn.btn-red:focus {background: #d03636;}
     body .btn.btn-red:active {background: #952727;}
 }
 body .btn.default {background: #c6c6c6 !important; cursor: default;}
+.btn-phone:before {content: ' '; position: relative; display: inline-block; margin: 0 9px 0 0; width: 16px; height: 16px; background: url(../img/themp/ico-phone-w.png) 0 0 no-repeat; position: relative; top: 2px;}
 .all-comments__namber {position: absolute;top: 7px;left: 0;background: #fff;padding: 0 30px 0 0;font-size: 18px;color: #a5a5a5;}
 .comments-no-autorize {background: #f4f4f2;padding: 41px 7% 37px;margin: 0 0 69px;}
 .comments-no-autorize h2 {margin-bottom: 46px;}
@@ -400,6 +427,7 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .delivery__soc .soc-vk {background: #4d7198;}
 .delivery__soc .soc-tw {background: #1faee9;}
 .delivery__soc .soc-lnk img {position: absolute; top: 8px; left: 8px;}
+.delivery__soc li:before {display: none !important;}
 
 .delivery__soc .soc-lnk:last-child {margin: 0;}
 .delivery__body {padding: 20px 30px 53px 60px;}
@@ -485,6 +513,38 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .buy__slider .owl-nav div:hover:before {opacity: 0.8;}
 .buy__slider .owl-nav .owl-next:before {background-position: -22px 0;}
 
+.buy__img {text-align: center;}
+.buy__img .buy__item {display: inline-block; vertical-align: middle; margin: 45px 16px;}
+.buy__lnk-all {position: absolute; bottom: -9px; left: 0; right: 0; text-align: center;}
+.buy__lnk-all a {background: #fff; color: #000; border-bottom: 1px solid #b2b2b2; position: relative; text-decoration: none;}
+.buy__lnk-all a:hover {border-color: transparent;}
+.buy__lnk-all a:before {content: ' '; position: absolute; top: 0; bottom: 0; right: 100%; width: 13px; background: #fff;}
+.buy__lnk-all a:after {content: ' '; position: absolute; top: 0; bottom: 0; left: 100%; width: 13px; background: #fff;}
+
+.contacts-list {margin: 0 0 30px;}
+.contacts-list__select {border-bottom: 1px solid #ccc; padding: 0 0 32px; text-align: center;}
+.contacts-list__select span {font-size: 30px; padding: 6px 37px 0 0; display: inline-block; vertical-align: top;}
+.contacts-list__select-box {display: inline-block; width: 330px; vertical-align: top; text-align: left;}
+.contacts-list__row {font-size: 0;}
+.contacts-list__item {display: inline-block; width: 50%; border-top: 1px solid #ccc; vertical-align: top; padding: 42px 0 50px 40px; text-align: left; font-size: 18px;}
+.contacts-list__item * {text-align: left !important;}
+.contacts-list__header {position: relative;}
+.contacts-list__header:before {content: ' '; position: absolute; top: 0; left: -40px; width: 25px; height: 30px; background: url(../img/themp/map.png) 0 0 no-repeat;}
+.contacts-list__btn {margin: 37px 0 0;}
+.contacts-list__btn a {display: inline-block;}
+.contacts-list__item p {margin: 0 0 5px; line-height: 1.4;}
+.contacts-list__footer {position: relative; border-top: 1px solid #ccc; text-align: center; position: relative; margin: 0 0 50px;}
+.contacts-list__footer .contacts-list__hide-all {background: #fff; color: #000; border-bottom: 1px solid #b2b2b2; position: relative; text-decoration: none; position: relative; top: -12px; font-size: 18px;}
+.contacts-list__footer .contacts-list__hide-all:hover {border-color: transparent;}
+.contacts-list__footer .contacts-list__hide-all:before {content: ' '; position: absolute; top: 0; bottom: 0; right: 100%; width: 13px; background: #fff;}
+.contacts-list__footer .contacts-list__hide-all:after {content: ' '; position: absolute; top: 0; bottom: 0; left: 100%; width: 13px; background: #fff;}
+
+.map {height: 730px; position: relative;}
+.map__wrap {position: absolute; height: 730px;}
+.map .contacts-list__item {border: 0; width: 100%; padding: 17px 0 20px 40px}
+.map .contacts-list__header:before {background-image: url(../img/themp/map-green.png);}
+
+
 .page-center {text-align: center;}
 .page-center h4 {margin-bottom: 20px;}
 .other-bg {background: #fff; margin: 0 0 60px; padding: 30px 80px 37px; position: relative; z-index: 2;
@@ -515,6 +575,7 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
     box-shadow: 0 20px 40px rgba(183,176,158,.3); }
 .contacts__phone {font-size: 18px;margin: 0 0 22px;}
 .contacts__ardess {padding: 51px 0 0; background: url(../img/themp/ico-ardess.png) center 0 no-repeat; line-height: 1.5;}
+.contacts__detsls {margin: 0 455px 0 0;}
 
 .content-head {margin-top: -807px; min-height: 810px; position: relative;}
 .content-head h1 {min-height: 211px;}
@@ -614,6 +675,13 @@ body .fotorama__arr {width: 22px; height: 36px; background: url(../img/themp/gal
 body .fancybox-close {background: url(../img/themp/close.png) 0 0 no-repeat; width: 13px; height: 13px; top: 20px; right: 20px; opacity: 0.4;}
 body .fancybox-close:hover {opacity: 1;}
 body .fancybox-overlay  {background: rgba(0, 0, 0, 0.5);}
+
+.other-contacts {margin-bottom: -47px;}
+.contacts-wrap {position: relative; margin-top: 81px;}
+.contacts-wrap .contacts__right {position: absolute; top: 0; right: 0;}
+
+
+
 
 /* ==========================================================================
    Helper classes

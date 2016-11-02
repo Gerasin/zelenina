@@ -4,8 +4,8 @@
 
 
 
-@media (min-width: 1230px) {
-    .container-fluid {width: 1230px;}
+@media (min-width: 1500px) {
+    .container-fluid {width: 1478px;}
 }
 
 
@@ -34,6 +34,13 @@
     .contacts__map {width: 63%;}
     .catalog__item-txt {padding: 0 25px;}
     .catalog__item-info {margin-left: 25px; margin-right: 25px;}
+    .contacts__detsls {margin-right: 500px;}
+    .contacts__user-ava {right: -115px;}
+    .contacts__user-name {margin-bottom: 15px;}
+    .contacts__user-name, .contacts__user-phone {display: block; width: 100%;}
+    .contacts__user-name p.contacts__mail {margin-top: 0;}
+    .office {margin-right: -90px;}
+
 }
 
 @media (max-width: 1300px) {
@@ -70,6 +77,7 @@
 	.copyright {padding-right: 20px;}
 	.gallery__list {padding: 0 30px;}
 	.gallery-shadow {padding: 30px 15px 28px;}
+
 }
 
 @media (max-width: 992px) {
@@ -134,7 +142,10 @@
 	.blog-big .catalog__item-txt {height: auto; padding-top: 15px; margin-bottom: 15px;}
 	.blog-big .catalog__item-info {margin-bottom: 15px;}
 	.delivery-bg {margin-bottom: -80px; height: 180px; overflow: hidden;}
-
+	.contacts-wrap .contacts__right {position: relative; right: auto; padding: 0 0 40px;}
+	.contacts__detsls {margin: 0;}
+	.contacts__user-info {margin: 0 110px 45px 0;}
+	.contacts__user-name, .contacts__user-phone {display: inline-block; width: 48%;}
 
 
 }
@@ -227,6 +238,15 @@
 	.gallery .owl-nav {display: none;}
 	.blog-big .catalog__img a {font-size: 18px;}
 	.delivery__btn {margin-top: 20px; width: auto;}
+	.office {margin-right: 0; margin-bottom: 20px;}
+	.office .lnk-dotted {margin-left: 3px;}
+	.office h4:before {top: -3px;} 
+	.contacts__user-ava img {width: 50px;}
+	.contacts__user-ava {width: 50px; height: 50px; right: -25px; margin-top: -25px;}
+	.contacts__user-info {margin-right: 25px; margin-bottom: 25px; padding: 17px 20px 24px 20px;}
+	.contacts__user-name, .contacts__user-phone {display: block; width: 100%;}
+	.contacts__user-name p.contacts__mail:before {top: 1;}
+
 
 }
 
