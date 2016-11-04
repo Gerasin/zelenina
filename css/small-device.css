@@ -127,9 +127,8 @@
 	.baner-about__img {bottom: 0;}
 	.baner-about__img img {height: 100%; max-width: initial;}
 	.stamp img {width: 126px;}
-	.main-page .head {min-height: 488px;}
-	.head-h1 {padding-top: 100px;}
-	.content-head {margin-top: -427px; min-height: 430px;}
+	.head-h1 {padding-top: 30px;}
+	.content-head {min-height: 430px;}
 	.comments__textarea {font-size: 16px; padding: 10px 15px 12px }
 	.comments__user {font-size: 18px;}
 	.comments .comments {margin-left: 50px;}
@@ -146,7 +145,8 @@
 	.contacts__detsls {margin: 0;}
 	.contacts__user-info {margin: 0 110px 45px 0;}
 	.contacts__user-name, .contacts__user-phone {display: inline-block; width: 48%;}
-
+	.main-bg .content-head {min-height: 400px;}
+	.main-bg, .main-bg {background-size: auto 550px;}
 
 }
 
@@ -246,6 +246,8 @@
 	.contacts__user-info {margin-right: 25px; margin-bottom: 25px; padding: 17px 20px 24px 20px;}
 	.contacts__user-name, .contacts__user-phone {display: block; width: 100%;}
 	.contacts__user-name p.contacts__mail:before {top: 1;}
+	.main-bg, .main-bg {background-size: auto 350px;}
+	.main-bg .content-head, .about-bg .content-head {min-height: 220px; padding-bottom: 30px;}
 
 
 }
