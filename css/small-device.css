@@ -146,7 +146,8 @@
 	.contacts__user-info {margin: 0 110px 45px 0;}
 	.contacts__user-name, .contacts__user-phone {display: inline-block; width: 48%;}
 	.main-bg .content-head {min-height: 400px;}
-	.main-bg, .main-bg {background-size: auto 550px;}
+	.main-bg, .about-bg {background-size: auto 550px;}
+
 
 }
 
@@ -208,7 +209,7 @@
 	.comments-no-autorize__textarea {margin-top: 8px;}
 	.comments-no-autorize {padding: 15px 15px 18px;}
 	.comments-no-autorize__input input {height: 30px;}
-	.comments-no-autorize__input input, .comments-no-autorize__textarea textarea {font-size: 14px;}
+	.comments-no-autorize__input input, .comments-no-autorize__textarea textarea {font-size: 18px;}
 	.comments-no-autorize__inp {width: 100%;}
 	.tabs {display: block; text-align: center; border: 0;}
 	.tabs li {display: block; margin-bottom: 10px; border-bottom: 1px solid #e3e3e3;}
@@ -246,8 +247,25 @@
 	.contacts__user-info {margin-right: 25px; margin-bottom: 25px; padding: 17px 20px 24px 20px;}
 	.contacts__user-name, .contacts__user-phone {display: block; width: 100%;}
 	.contacts__user-name p.contacts__mail:before {top: 1;}
-	.main-bg, .main-bg {background-size: auto 350px;}
-	.main-bg .content-head, .about-bg .content-head {min-height: 220px; padding-bottom: 30px;}
+	.main-bg, .about-bg  {background-size: auto 350px;}
+	.main-bg .content-head {min-height: 220px; padding-bottom: 30px;}
+	.about-bg .content-head {min-height: 250px; padding-bottom: 30px;}
+	.listing-mous  {bottom: 30px;}
+	.production__img {float: none; padding: 0 0 10px; margin-bottom: 5px;}
+	.production__txt {margin: 0;}
+	.production {margin-bottom: 0;}
+	.baner-about {padding-left: 10px; padding-right: 10px;}
+	.row-text-detal__img {float: none; padding: 0 0 10px;}
+	.row-text-detal {padding-bottom: 0; padding-top: 0;}
+	.command {margin-bottom: 20px;}
+	.about-other .max-width__wrap {padding-left: 15px; padding-right: 15px;}
+	.diplom-img {padding-bottom: 15px;}
+	.other-corusel__autor {width: 280px; padding-left: 78px;}
+	.diplom__img {margin: 0 0 10px;}
+	.diplom-img {padding: 0 5px 20px; text-align: center; width: 49%;}
+	.diplom__txt {padding-bottom: 20px;}
+	.other-corusel__autor h5 {font-size: 18px;}
+	.other-corusel__autor p {font-size: 12px;}
 
 
 }

@@ -5,8 +5,16 @@ function mapWidth() {
 	}
 }
 
+function boxMaxWidth() {
+	if($('.max-width').length) {
+		var mapLeft = -1 * $('.max-width').offset().left;
+		$('.max-width__wrap').css({'margin-left' : mapLeft, 'margin-right' : mapLeft});
+	}
+}
+
 $(window).resize(function() {
-	mapWidth()
+	mapWidth();
+	boxMaxWidth()
 });
 
 $(document).ready(function() {
@@ -27,6 +35,8 @@ $(document).ready(function() {
 	    autoHeight:false,
 	    nav:true
 	});
+
+	
 
 
 	$('.burger').on('click', function () {
@@ -105,8 +115,15 @@ $(document).ready(function() {
 
 
 	mapWidth();
+	boxMaxWidth();
 
-
+	$('.other-corusel').owlCarousel({
+    	items:1,
+	    margin:0,
+	    lazyLoad:true,
+	    autoHeight:false,
+	    nav:true
+	});
 
 
 
