@@ -458,7 +458,7 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .head__video a:hover {border-color: transparent; text-decoration: none;}
 .head__video a:before {content: ' '; position: absolute; top: -8px; left: -54px; width: 40px; height: 40px; background: url(../img/themp/play.png) 0 0 no-repeat;}
 
-.products {margin: 0 0 55px;}
+.products {padding: 0 0 55px; background: #fff;}
 .products__header {text-align: center; margin: 0 0 84px;}
 .products__slider {padding: 0 60px;margin-bottom: 0;}
 .products__item-in {width: 292px;height: 340px;margin: 0 auto;position: relative;padding: 223px 0 0;}
@@ -471,20 +471,25 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .products__slider .owl-nav .owl-prev {left: 0;}
 .products__slider .owl-nav .owl-next {right: 0; background-position: -22px 0;}
 
-.service {position: relative;font-size: 0;padding: 45px 3px 12px;margin: 0 0 65px;}
+.service {position: relative;font-size: 0;padding: 45px 3px 12px;margin: 0 0 15px;}
 .service--marg0 {margin-bottom: 0;}
 .service:before {content: ' '; position: absolute; top: 0; bottom: 0; left: -999px; right: -999px; background: #f4f4f2;}
 .service__list {position: relative; width: 33.333%; display: inline-block; font-size: 14px; text-align: center;}
 .service__list h4 {margin-bottom: 20px;}
 .service__img {height: 244px;}
 
-.section-page {text-align: center;position: relative;padding: 0;max-width: 1154px;margin: 0 auto 105px;}
+.section-page {text-align: center;position: absolute; left: 0; right: 0; padding: 10px 0 0; opacity: 0;}
+.section-page.section-act {opacity: 1;}
+.section-list {height: 900px; position: relative; max-width: 1154px;margin: 0 auto 105px;}
 .section-page p {position: relative; z-index: 5;}
 .section-page__img {margin: 0 0 25px;position: relative;}
 .section-page__img img {max-width: 100%;}
 .section-page__img-big {margin: -10px -50px -10px;}
 .stamp {position: absolute; top: 0px; right: 10px;}
 .section-page__img-big {margin: -10px -15px -10px;}
+.section-list__wrap {position: absolute; top: 0; left: 0; right: 0;}
+.section-list__start {position: fixed; left: 15px; right: 15px;}
+.section-list__stop {position: absolute; top: 400px; left: 0; right: 0;}
 
 .baner-about {margin: 0px -999px -4px;padding: 40px 0 66px;color: #fff;position: relative;text-align: center;overflow: hidden;}
 .baner-about .baner-about__center {position: relative;z-index: 10;max-width: 1081px;margin: 0 auto;}
@@ -502,8 +507,9 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 @media (min-width: 992px) {
     .baner-about a:hover {border-color: transparent;}
 }
-
-.buy {position: relative; padding: 80px 0 69px; max-width: 1150px; margin: 99px auto 72px; border: 2px dashed #d9d9d9;
+.page-baner {background: #fff;}
+.buy-cont {background: #fff; padding: 99px 0 72px}
+.buy {position: relative; padding: 80px 0 69px; max-width: 1150px; margin: 0 auto; border: 2px dashed #d9d9d9;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px; }
@@ -590,10 +596,9 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 
 .main-page .col-md-6.col-md-offset-3 {margin-left: 0; width: 100%; float: none;}
 
-.section-header {margin: 0 0 25px; text-align: center; position: relative;}
-.section-header h2 {position: absolute; left: 15px; right: 15px; top: 0; background: #fff; z-index: 40;}
-.section-header.active h2 {position: fixed; top: 0;}
-.section-header.stop h2 {position: absolute; top: 0;}
+.section-header {margin: 0 0 25px; text-align: center;}
+.section-header h2 {background: #fff; z-index: 40;}
+
 
 
 .user {max-width: 280px;margin: 61px auto 25px;text-align: center;}
@@ -776,7 +781,7 @@ body .fancybox-overlay  {background: rgba(0, 0, 0, 0.5);}
 .diplom__autor p {font-size: 14px;}
 .diplom__txt p {line-height: 1.5}
 .diplom__txt {padding: 0 0 70px;}
-
+.section-page-corusel .owl-nav {display: none;}
 
 
 

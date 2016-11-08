@@ -128,8 +128,6 @@ $(document).ready(function() {
 
 
 
-
-
 	// submenu left
 	$('.submenu .active > a').on('click', function () {
 		if($(this).parent('li').hasClass('open')) { 
@@ -342,44 +340,45 @@ $(document).ready(function() {
 
 function headerHeight() {
 
-	if($('.section-header').length) {
-		$('.section-page:first').addClass('scroll_box');
-		var scrollTopBox = $('.section-page.scroll_box').offset().top;
-		var hHeight = $('.section-header h2').height();
-		$('.section-header').css({'min-height' : hHeight})
 
-		var headeName = $('.section-header');
-		var hStopTop = headeName.offset().top;
-		var hStopBottom = $('.section-stop').offset().top - headeName.height() - 22;
-		var hStop = hStopBottom - hStopTop;
+	if($('.section-header').length) {
+		var scrollTopBox = $('.section-list').offset().top;
+		var minBoxHeight = $('.section-header').height() + $('.section-page').height() + 400;
+		$('.section-list').css({'height' : minBoxHeight});
 		$(window).scroll(function(){
 			var scrollBody = $(window).scrollTop();
 
-			// if(scrollBody > scrollTopBox) {
-			// 	$('.section-page.scroll_box').next().addClass('net_page');
-			// 	$('.section-page.scroll_box').removeClass('scroll_box');
-			// 	$('.net_page').addClass('scroll_box');
-			// 	$('.net_page').removeClass('net_page');
-			// 	scrollTopBox = $('.section-page.scroll_box').offset().top;
-			// 	scrollTopBox = scrollTopBox - 150;
-			// 	$('body, html').animate({'scrollTop' : scrollTopBox});
-			// }
-
-
-
-			if(scrollBody > hStopTop) {
-				headeName.addClass('active');
-			} else {
-				headeName.removeClass('active');
+			if(scrollBody < scrollTopBox) {
+				if($('.section-page').eq(0).is(":visible")) {
+					$('.section-page').eq(2).stop().css({'opacity' : 0});
+					$('.section-page').eq(1).stop().css({'opacity' : 0});
+					$('.section-page').eq(0).stop().animate({'opacity' : 1}, 300);
+				}
+			}
+			if(scrollBody > scrollTopBox && scrollBody <= (scrollTopBox + 200) ) {
+				if($('.section-page').eq(1).is(":visible")) {
+					$('.section-page').eq(2).stop().css({'opacity' : 0});
+					$('.section-page').eq(1).stop().animate({'opacity' : 1}, 300);
+					$('.section-page').eq(0).stop().css({'opacity' : 0});
+				}
 			};
-			if(scrollBody > hStopBottom) {
-				headeName.addClass('stop');
-				headeName.find('h2').css({'top' : hStop})
-			} else {
-				headeName.removeClass('stop');
-				
-				headeName.find('h2').css({'top' : 0}) 
+			if(scrollBody > (scrollTopBox + 200) && scrollBody < (scrollTopBox + 400) ) {
+				if($('.section-page').eq(2).is(":visible")) {
+					$('.section-page').eq(2).stop().animate({'opacity' : 1}, 300);
+					$('.section-page').eq(1).stop().css({'opacity' : 0});
+					$('.section-page').eq(0).stop().css({'opacity' : 0});
+				}
 			};
+			if(scrollBody > scrollTopBox && scrollBody < (scrollTopBox + 400)) {
+				$('.section-list__wrap').addClass('section-list__start');
+			} else {
+				$('.section-list__wrap').removeClass('section-list__start');
+			};
+			if(scrollBody > (scrollTopBox + 400)) {
+				$('.section-list__wrap').addClass('section-list__stop');
+			} else {
+				$('.section-list__wrap').removeClass('section-list__stop');
+			}
 		})
 	}
 
@@ -418,5 +417,6 @@ $('body').append(
 		<li style="margin: 0 0 5px;"><a href="blog.html">Blog</a></li> \
 		<li style="margin: 0 0 5px;"><a href="magazine.html">Magazine</a></li> \
 		<li style="margin: 0 0 5px;"><a href="contacts.html">Contacts</a></li> \
+		<li style="margin: 0 0 5px;"><a href="about.html">About</a></li> \
 	</ol> \
 </div>');
