@@ -147,7 +147,11 @@
 	.contacts__user-name, .contacts__user-phone {display: inline-block; width: 48%;}
 	.main-bg .content-head {min-height: 400px;}
 	.main-bg, .about-bg {background-size: auto 550px;}
-
+	.command__img {zoom: 70%;}
+	.command__info {top: 18px;}
+	.command .max-width__wrap {height: 491px;}
+	.command__btn-txt {font-size: 18px;}
+	.command__btn-txt span {font-size: 22px;}
 
 }
 
@@ -266,7 +270,8 @@
 	.diplom__txt {padding-bottom: 20px;}
 	.other-corusel__autor h5 {font-size: 18px;}
 	.other-corusel__autor p {font-size: 12px;}
-
+	.command-mob-wr {display: block;}
+	.command {display: none;}
 
 }
 

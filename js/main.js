@@ -20,6 +20,14 @@ $(window).resize(function() {
 $(document).ready(function() {
 
 
+	$('.command__btn').hover(function () {
+		var indexCommand = $(this).attr('date-index');
+		$('.command__item').eq(indexCommand).fadeIn();
+		console.log(indexCommand);
+	}, function () {
+		$('.command__item').fadeOut();
+	});
+
 	var minHeight = $('.sidebar_inner').height();
 	$('.container').css({'min-height' : minHeight});
 
@@ -94,6 +102,14 @@ $(document).ready(function() {
 	            items:3
 	        }
 	    }
+	});
+
+	$('.command-mob').owlCarousel({
+    	items:1,
+    	loop:true,
+	    margin:0,
+	    autoHeight:false,
+	    nav:true,
 	});
 
 
