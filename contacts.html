@@ -251,74 +251,6 @@
         <script src="js/main.js"></script>
 
         <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-        <!--<script>
-            var myMap;
-
-            ymaps.ready(init);
-
-            function init () {
-
-                myMap = new ymaps.Map('map', {
-                    center: [56.837136,60.607602],
-                    zoom: 15,
-                    controls: []
-                });
-
-
-                counter = 0,
-
-                // Создание макета содержимого балуна.
-                // Макет создается с помощью фабрики макетов с помощью текстового шаблона.
-                BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                    '<div class="contacts-list__item">' +
-                    '<div class="contacts-list__header"><h3>ТЦ Европейский</h3></div>' +
-                    '<p>г. Москва, Киевского вокзала площадь, д.2</p>' +
-                    '<p>10:00-22:00 пн-чт,<br> ' +
-                    'вс 10:00-23:00 пт-сб</p>' +
-                '</div>' , {
-
-                            
-                });
-                
-                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                        hintContent: ''
-                    }, {
-                        balloonContentLayout: BalloonContentLayout,
-                        iconLayout: 'default#image',
-                        iconImageHref: 'img/themp/marker.png',
-                        iconImageSize: [33, 44],
-                        iconImageOffset: [-17, -44]
-                    });
-
-                myMap.geoObjects.add(myPlacemark);
-
-
-                // 2 map
-                BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                    '<div class="contacts-list__item">' +
-                    '<div class="contacts-list__header"><h3>ТЦ Европейский</h3></div>' +
-                    '<p>г. Москва, Киевского вокзала площадь, д.2</p>' +
-                    '<p>10:00-22:00 пн-чт,<br> ' +
-                    'вс 10:00-23:00 пт-сб</p>' +
-                '</div>' , {
-
-                            
-                });
-                
-                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                        hintContent: ''
-                    }, {
-                        balloonContentLayout: BalloonContentLayout,
-                        iconLayout: 'default#image',
-                        iconImageHref: 'img/themp/marker.png',
-                        iconImageSize: [33, 44],
-                        iconImageOffset: [-17, -44]
-                    });
-
-                myMap.geoObjects.add(myPlacemark);
-
-            }
-        </script> -->
         <script type="text/javascript">
             ymaps.ready(init);
 
@@ -410,7 +342,7 @@
             clusterer.add(myGeoObjects);
             myMap.geoObjects.add(clusterer);
             }
-            </script>
+        </script>
         
 
     </body>

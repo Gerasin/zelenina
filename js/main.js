@@ -350,23 +350,23 @@ function headerHeight() {
 
 			if(scrollBody < scrollTopBox) {
 				if($('.section-page').eq(0).is(":visible")) {
-					$('.section-page').eq(2).stop().css({'opacity' : 0});
-					$('.section-page').eq(1).stop().css({'opacity' : 0});
-					$('.section-page').eq(0).stop().animate({'opacity' : 1}, 300);
+					$('.section-page:visible').eq(2).stop().animate({'opacity' : 0}, 800);
+					$('.section-page:visible').eq(1).stop().animate({'opacity' : 0}, 800);
+					$('.section-page').eq(0).stop().animate({'opacity' : 1}, 800);
 				}
 			}
 			if(scrollBody > scrollTopBox && scrollBody <= (scrollTopBox + 200) ) {
 				if($('.section-page').eq(1).is(":visible")) {
-					$('.section-page').eq(2).stop().css({'opacity' : 0});
-					$('.section-page').eq(1).stop().animate({'opacity' : 1}, 300);
-					$('.section-page').eq(0).stop().css({'opacity' : 0});
+					$('.section-page:visible').eq(2).stop().animate({'opacity' : 0}, 800);
+					$('.section-page').eq(1).stop().animate({'opacity' : 1}, 800);
+					$('.section-page:visible').eq(0).stop().animate({'opacity' : 0}, 800);
 				}
 			};
 			if(scrollBody > (scrollTopBox + 200) && scrollBody < (scrollTopBox + 400) ) {
 				if($('.section-page').eq(2).is(":visible")) {
-					$('.section-page').eq(2).stop().animate({'opacity' : 1}, 300);
-					$('.section-page').eq(1).stop().css({'opacity' : 0});
-					$('.section-page').eq(0).stop().css({'opacity' : 0});
+					$('.section-page').eq(2).stop().animate({'opacity' : 1}, 800);
+					$('.section-page:visible').eq(1).stop().animate({'opacity' : 0}, 800);
+					$('.section-page:visible').eq(0).stop().animate({'opacity' : 0}, 800);
 				}
 			};
 			if(scrollBody > scrollTopBox && scrollBody < (scrollTopBox + 400)) {

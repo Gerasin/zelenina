@@ -519,11 +519,21 @@
                     <form>
                         <div class="modal-body">
                             <p>Заполните поля и мы перезвоним вам.</p>
-                            <div class="row-input"><input type="text" placeholder="Имя *"></div>
-                            <div class="row-input"><input type="text" class="mask" placeholder="Телефон *" ></div>
+                            <div class="row-input">
+                                <div class="input-box">
+                                    <div class="error-txt">Вы не ввели Имя</div>
+                                    <input type="text" class="valid-txt" placeholder="Имя *">
+                                </div>
+                            </div>
+                            <div class="row-input">
+                                <div class="input-box">
+                                    <div class="error-txt">Вы не ввели Телефон</div>
+                                    <input type="text" class="valid-phone" placeholder="Телефон *">
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" value="Отправить" data-dismiss="modal">
+                            <input type="submit" value="Отправить" data-dismiss="modal" class="valid-btn">
                         </div>
                     </form>
                 </div>
