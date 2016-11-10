@@ -268,11 +268,11 @@ $(document).ready(function() {
 
 	// fancybox
 	$(".various").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
+		maxWidth	: 1400,
+		maxHeight	: 1000,
 		fitToView	: false,
 		width		: '100%',
-		height		: '70%',
+		height		: '90%',
 		autoSize	: false,
 		closeClick	: false,
 		openEffect	: 'none',

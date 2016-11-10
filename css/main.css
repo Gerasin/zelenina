@@ -462,10 +462,16 @@ body .btn.default {background: #c6c6c6 !important; cursor: default;}
 .products {padding: 0 0 55px; background: #fff;}
 .products__header {text-align: center; margin: 0 0 84px;}
 .products__slider {padding: 0 60px;margin-bottom: 0;}
-.products__item-in {width: 292px;height: 340px;margin: 0 auto;position: relative;padding: 223px 0 0;}
+.products__item-in {width: 292px;height: 340px;margin: 0 auto;position: relative;padding: 223px 0 0; display: block; text-decoration: none !important;}
+.products__item-in span {display: block;}
 .products__item-img {position: absolute; top: 0; left: 0; right: 0; z-index: 1; text-align: center;}
 .products__item-txt {position: relative; z-index: 3; width: 280px; margin: 0 auto; text-align: center; font-size: 14px;}
-
+.fancybox-nav {width: 70px !important; opacity: 0.2;}
+.fancybox-nav:hover {opacity: 0.8;}
+body .fancybox-next {right: -30px;}
+body .fancybox-prev {left: -42px;}
+body .fancybox-next span {background: url(../img/themp/gall_pointer.png) 100% 0 no-repeat; width: 22px; height: 36px; visibility: visible;}
+body .fancybox-prev span {background: url(../img/themp/gall_pointer.png) 0 0 no-repeat; width: 22px; height: 36px; visibility: visible;}
 
 .products__slider .owl-nav div {position: absolute; top: 158px; background: url(../img/themp/pointer-min.png) 0 0 no-repeat; font-size: 0; opacity: 0.2; width: 22px; height: 36px;}
 .products__slider .owl-nav div:hover {opacity: 0.8;}
