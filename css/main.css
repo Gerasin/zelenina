@@ -109,7 +109,7 @@ body * {outline: none !important;}
 .logo {width: 175px;margin: 0 auto;padding: 0;position: absolute;top: 0;left: 50%;margin-left: -65px;height: 148px;overflow: hidden;}
 .logo img {width: 175px;margin-top: -16px;}
 .soc {float: right; padding: 61px 0 0; margin: 0;}
-.soc li {float: left; margin: 0 0 0 26px; list-style: none;}
+.soc li {float: left; margin: 0 0 0 10px; list-style: none;}
 .soc li a {display: inline-block; width: 27px; height: 27px;}
 .soc li a:hover {opacity: 0.7;}
 .menu {float: left;padding: 56px 0 0;margin: 0 0 0 -16px; max-width: 45%;}
@@ -485,16 +485,16 @@ body .fancybox-prev span {background: url(../img/themp/gall_pointer.png) 0 0 no-
 .service__list h4 {margin-bottom: 20px;}
 .service__img {height: 244px;}
 
-.section-page {text-align: center; margin-bottom: 140px; padding-top: 90px;}
-/*.hot.active {background: red;}*/
-.section-list {position: relative; max-width: 1290px;margin: 0 auto 0px; overflow: hidden;}
+.section-page {text-align: center;position: absolute; left: 0; right: 0; padding: 10px 0 0; opacity: 0;}
+.section-page.section-act {opacity: 1;}
+.section-list {height: 900px; position: relative; max-width: 1290px;margin: 0 auto 105px;}
 .section-page p {position: relative; z-index: 5;}
 .section-page__img {margin: 0 0 25px;position: relative;}
 .section-page__img img {max-width: 100%;}
 .section-page__img-big {margin: -10px -50px -10px;}
 .stamp {position: absolute; top: 0px; right: 10px;}
 .section-page__img-big {margin: -10px -15px -10px;}
-.section-list__wrap {}
+.section-list__wrap {position: absolute; top: 0; left: 0; right: 0;}
 .section-list__start {position: fixed; left: 15px; right: 15px;}
 .section-list__stop {position: absolute; top: 400px; left: 0; right: 0;}
 
@@ -603,10 +603,7 @@ body .fancybox-prev span {background: url(../img/themp/gall_pointer.png) 0 0 no-
 
 .main-page .col-md-6.col-md-offset-3 {margin-left: 0; width: 100%; float: none;}
 
-.section-header {margin: 0; text-align: center; position: absolute; top: 0px; left: 10px; right: 10px; z-index: 30;}
-.section-header.fix {position: fixed;}
-.section-page__up {position: absolute; top: 0; left: 0; right: 0;}
-.section-page__up.fix {position: fixed; margin-top: 130px; z-index: 50;}
+.section-header {margin: 0 0 25px; text-align: center;}
 .section-header h2 {background: #fff; z-index: 40;}
 
 
@@ -702,9 +699,9 @@ body .fancybox-overlay  {background: rgba(0, 0, 0, 0.5);}
 .contacts-wrap {position: relative; margin-top: 81px;}
 .contacts-wrap .contacts__right {position: absolute; top: 0; right: 0;}
 
-.about-bg {background: url(../img/themp/about-bg.jpg) center 0 no-repeat;}
+.about-bg .layout {background: url(../img/themp/about-bg.jpg) center 0 no-repeat;}
 .about-bg .head {background: none;}
-.main-bg {background: url(../img/themp/main-bg.jpg) center 0 no-repeat;}
+.main-bg .layout {background: url(../img/themp/main-bg.jpg) center 0 no-repeat;}
 .main-bg .head {background: none;}
 .main-bg .content-head {min-height: 728px;}
 .about-bg .content-head h1 {color: #fff;}
@@ -832,7 +829,7 @@ body .fancybox-overlay  {background: rgba(0, 0, 0, 0.5);}
 .command-mob .owl-nav .owl-prev {left: 0;}
 .command-mob .owl-nav .owl-next {right: 0; background-position: -22px 0;}
 
-
+.contacts .copyright {display: none !important;}
 
 /* ==========================================================================
    Helper classes
