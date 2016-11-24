@@ -89,7 +89,6 @@
 	.workarea h4 {font-size: 20px;}
 	.head__txt {font-size: 20px;}
 	body, .bottom-comment {font-size: 16px;}
-	.delivery__head span {display: block; padding: 0 0 10px; line-height: 1.2}
 	.delivery__soc {padding-bottom: 10px;}
 
     .burger {display: block;}
@@ -152,16 +151,18 @@
 	.command .max-width__wrap {height: 491px;}
 	.command__btn-txt {font-size: 18px;}
 	.command__btn-txt span {font-size: 22px;}
+	.delivery__soc ul {margin-bottom: 0 !important;}
 
 }
 
 @media (max-width: 767px) {
 	.workarea h1 {font-size: 36px;}
-	.head-h1 h1 {font-size: 36px;}
+	.head-h1 h1 {font-size: 24px;}
+	.head-h1 {margin: 0; height: 102px;}
 	.workarea h2 {font-size: 30px;}
 	.workarea h3 {font-size: 24px;}
 	.workarea h4 {font-size: 18px;}
-	.head__txt {font-size: 18px;}
+	.head__txt {font-size: 16px; margin-bottom: 10px; height: 89px;}
 	body, .bottom-comment {font-size: 14px;}
 
 	.workarea tbody, .workarea tr, .workarea td { display: block; }
@@ -201,7 +202,7 @@
 	.delivery__txt {margin-bottom: 30px;}
 	.delivery__txt {font-size: 14px;}
 	.delivery__btn {position: relative; width: 100%; top: auto}
-	.delivery__head span {text-align: center; padding-bottom: 20px;}
+	.delivery__head span {text-align: center;}
 	.delivery h3 {margin-bottom: 26px;}
 	.comments__user {font-size: 14px;}
 	.comments__date {padding-top: 0;}
@@ -252,8 +253,8 @@
 	.contacts__user-name, .contacts__user-phone {display: block; width: 100%;}
 	.contacts__user-name p.contacts__mail:before {top: 1;}
 	.main-bg, .about-bg  {background-size: auto 350px;}
-	.main-bg .content-head {min-height: 220px; padding-bottom: 30px;}
-	.about-bg .content-head {min-height: 250px; padding-bottom: 30px;}
+	.main-bg .content-head {min-height: 270px; padding-bottom: 30px;}
+	.about-bg .content-head {min-height: 270px; padding-bottom: 30px;}
 	.listing-mous  {bottom: 30px;}
 	.production__img {float: none; padding: 0 0 10px; margin-bottom: 5px;}
 	.production__txt {margin: 0;}
@@ -272,6 +273,15 @@
 	.other-corusel__autor p {font-size: 12px;}
 	.command-mob-wr {display: block;}
 	.command {display: none;}
+	.request-modal .modal-body {padding-left: 15px; padding-right: 15px;}
+	.request-modal .modal-dialog {width: 280px;}
+	.request-modal .modal-footer {padding-left: 15px; padding-right: 15px;}
+	.delivery__head > span {display: block; text-align: center;}
+	.contacts-list__item {width: 100%;}
+	.contacts-list__select-box {display: block; width: auto;}
+	body .selectize-control {width: 100% !important;}
+	.contacts-list__select span {display: block; padding: 0 0 10px; font-size: 24px;}
+
 
 }
 

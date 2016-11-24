@@ -354,50 +354,56 @@ $(document).ready(function() {
 })
 
 
+ $(function(){
+	(function($) {
+		$.fn.blockInheart = function(speed, pause) {
+		    function vis(el) {
+		        var top = $(el).offset().top,
+		            height = $(window).height(),
+		            scroll = $(window).scrollTop();
+		        return scroll > top && scroll < top + height*2
+		    }
+		    this.each(function(indx, el) {
+		        var hide = true,
+		            timer;
+		        $(window).scroll(function() {
+		            window.clearTimeout(timer);
+		            if (!vis(el)) hide = true;
+		            timer = window.setTimeout(function(event) {
+		                if (vis(el) && hide) $("body, html").animate({
+		                    scrollTop: $(el).offset().top + $(el).height() + 230
+		                }, speed, function() {
+		                    hide = false,
+		                    $('.hot').removeClass('active'),
+		                    $(el).addClass('active')
+		                })
+		            }, pause)
+		        })
+		    });
+		    return this
+		}
+	})(jQuery);
+	 $(".hot").blockInheart(800,100)
+   })
+
+
 function headerHeight() {
 
 
 	if($('.section-header').length) {
 		var scrollTopBox = $('.section-list').offset().top;
-		var minBoxHeight = $('.section-header').height() + $('.section-page').height() + 400;
-		$('.section-list').css({'height' : minBoxHeight});
+		var scrollBottompBox = $('.section-list').offset().top + $('.section-list').height() - $('.section-page:last').height() - 200;
 		$(window).scroll(function(){
 			var scrollBody = $(window).scrollTop();
 
-			if(scrollBody < scrollTopBox) {
-				if($('.section-page').eq(0).is(":visible")) {
-					$('.section-page:visible').eq(2).stop().animate({'opacity' : 0}, 800);
-					$('.section-page:visible').eq(1).stop().animate({'opacity' : 0}, 800);
-					$('.section-page').eq(0).stop().animate({'opacity' : 1}, 800);
-				}
-			}
-			if(scrollBody > scrollTopBox && scrollBody <= (scrollTopBox + 200) ) {
-				if($('.section-page').eq(1).is(":visible")) {
-					$('.section-page:visible').eq(2).stop().animate({'opacity' : 0}, 800);
-					$('.section-page').eq(1).stop().animate({'opacity' : 1}, 800);
-					$('.section-page:visible').eq(0).stop().animate({'opacity' : 0}, 800);
-				}
-			};
-			if(scrollBody > (scrollTopBox + 200) && scrollBody < (scrollTopBox + 400) ) {
-				if($('.section-page').eq(2).is(":visible")) {
-					$('.section-page').eq(2).stop().animate({'opacity' : 1}, 800);
-					$('.section-page:visible').eq(1).stop().animate({'opacity' : 0}, 800);
-					$('.section-page:visible').eq(0).stop().animate({'opacity' : 0}, 800);
-				}
-			};
-			if(scrollBody > scrollTopBox && scrollBody < (scrollTopBox + 400)) {
-				$('.section-list__wrap').addClass('section-list__start');
+			if(scrollBody > scrollTopBox && scrollBody < scrollBottompBox) {
+				$('.section-header, .section-page__up').addClass('fix');
 			} else {
-				$('.section-list__wrap').removeClass('section-list__start');
+				$('.section-header, .section-page__up').removeClass('fix');
 			};
-			if(scrollBody > (scrollTopBox + 400)) {
-				$('.section-list__wrap').addClass('section-list__stop');
-			} else {
-				$('.section-list__wrap').removeClass('section-list__stop');
-			}
+			
 		})
 	}
-
 }
 
 
